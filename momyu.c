@@ -8,41 +8,54 @@
 errorimi
 #endif
 
+char *moption2momutput[] = {
+"","","","","","","","","","","","","","","","",
+"","","","","","","","","","","","","","","","",
+"","","","","","","","","","","","","","","","",
+"","","","","","","","","","","","","","","","","",
+/* A */"","","","","","","","","","","","",
+/* M */"きのこマスター",
+"","","","","","","","","","","","",
+/* Z */"",
+/* [ */"","","","","",/* ` */"",
+/* a */"",
+/* b */"",
+/* c */"きゃべつウィーク",
+/* d */"闇のお茶会",
+/* e */"",
+/* f */"森のシャワー",
+/* g */"",
+/* h */"こんにちは！",
+/* i */"",
+/* j */"",
+/* k */"",
+/* l */"光るどんぐり",
+/* m */"もみゅ",
+/* n */"",
+/* o */"",
+/* p */"",
+/* q */"",
+/* r */"",
+/* s */"",
+/* t */"",
+/* u */"",
+/* v */"",
+/* w */"",
+/* x */"",
+/* y */"",
+/* z */""
+};
+
+
 int main(int argc, char *argv[])
 {
-    char c;
-    int i;
+    int c, i;
     extern char *optarg;
     extern int optind;
 
-    while ((c = (char)getopt(argc, argv, "cdfhlm:M")) != -1)
+    while ((c = getopt(argc, argv, "cdfhlmM")) != -1)
     {
-        switch (c)
-        {
-            case 'c':
-                printf("きゃべつウィーク\n");
-                break;
-            case 'd':
-                printf("闇のお茶会\n");
-                break;
-            case 'f':
-                printf("森のシャワー\n");
-                break;
-            case 'h':
-                printf("こんにちは！\n");
-                break;
-            case 'l':
-                printf("光るどんぐり\n");
-                break;
-            case 'm':
-                for (i = atoi(optarg); i > 0; i--)
-                    printf("もみゅ\n");
-                break;
-            case 'M':
-                printf("きのこマスター\n");
-            default:
-                break;
-        }
+        printf("%s\n",moption2momutput[c]);
     }
     argc -= optind;
     argv += optind;
