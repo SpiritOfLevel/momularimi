@@ -2,8 +2,8 @@
 #if defined(__GNUC__)
 #include <unistd.h>
 #elif defined(_MSC_VER)
-#include <stdlib.h>
 #include "getopt.h"
+#include <stdlib.h>
 #else
 errorimi
 #endif
@@ -46,9 +46,9 @@ int main(int argc, char *argv[])
     }
     argc -= optind;
     argv += optind;
-  	for(i = 0; i < argc; i++)
-   	{
-   		printf("%sもみゅ\n",argv[i]);
+    for (i = 0; i < argc; i++)
+    {
+        printf("%sもみゅ\n", argv[i]);
     }
     return 0;
 }
