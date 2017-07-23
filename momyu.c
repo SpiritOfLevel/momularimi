@@ -1,5 +1,12 @@
-#include <stdio.h>
+﻿#include <stdio.h>
+#if defined(__GNUC__)
 #include <unistd.h>
+#elif defined(_MSC_VER)
+#include <stdlib.h>
+#include "getopt.h"
+#else
+errorimi
+#endif
 
 int main(int argc, char *argv[])
 {
