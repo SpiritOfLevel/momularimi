@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
     extern char *optarg;
     extern int optind;
 
-    while ((c = getopt(argc, argv, ":Mcdfhlm:")) != -1)
+    while ((c = getopt(argc, argv, ":LMcdfhlm:")) != -1)
     {
         printf("%s\n", moption2momutput[c]);
         if (c != (int)'m')
