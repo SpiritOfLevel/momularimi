@@ -14,7 +14,8 @@ const char *moption2momutput[] = {
     "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
     "", "", "", "", "", "", "", "", "", "",
     /* : */ "もみゅ", "", "", "", "", "", "",
-    /* A */ "", "", "", "", "", "", "", "", "", "", "",
+    /* A */ "", "", "", "", "",
+    /* F */ "森を汚さないでね", "", "", "", "", "",
     /* L */ "伝説のきりかぶ",
     /* M */ "きのこマスター",
     "", "", "", "", "", "", "", "", "", "", "", "",
@@ -53,7 +54,7 @@ int main(int argc, char *argv[])
     extern char *optarg;
     extern int optind;
 
-    while ((c = getopt(argc, argv, ":LMcdfhlm:")) != -1)
+    while ((c = getopt(argc, argv, ":FLMcdfhlm:")) != -1)
     {
         printf("%s\n", moption2momutput[c]);
         if (c != (int)'m')
